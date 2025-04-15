@@ -101,6 +101,12 @@ inicio3:
     else printf("Jogador 2 comeca!\n");
 
 turno:
+ caixa_botao = rand() % 5 + 1;
+    caixa_cobra = rand() % 5 + 1;
+    if (caixa_botao == caixa_cobra) {
+        caixa_cobra = (caixa_cobra % 5) + 1;
+    }
+
     if (vez == 0) {
         printf("\nJogador 1, escolha uma caixa (1 a 5): ");
     } else {
